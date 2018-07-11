@@ -1,0 +1,18 @@
+User
+{"_id":1.0,"name":"kim","pwd":1.0,"email":"kim@gmail.com","profile":"kim@korea.ac.kr","friend":[0.0,1.0,0.0]}
+{"_id":2.0,"name":"lee","pwd":2.0,"email":"lee@gmail.com","profile":"lee@korea.ac.kr","friend":[0.0,1.0,0.0]}
+{"_id":3.0,"name":"lee","pwd":3.0,"email":"park@gmail.com","profile":"park@korea.ac.kr","address":[{"location":"Seoul","explain":"company","number":566867.0}],"friend":[0.0,1.0,0.0]}
+{"_id":4.0,"name":"jang","pwd":4.0,"email":"jang@gmail.com","profile":"jang@korea.ac.kr","address":[{"location":"Busan","explain":"home","number":1.7117852e+07}],"friend":[0.0,2.0,0.0]}
+{"_id":5.0,"name":"lim","pwd":5.0,"email":"lim@gmail.com","profile":"lim@korea.ac.kr","address":[{"location":"Busan","explain":"home","number":1.36695065e+08},{"location":"Seoul","explain":"company","number":4.53494e+06},{"location":"Youngin","explain":"home","number":6.632092e+06}],"friend":[1.0,2.0,0.0]}
+
+Feed
+{"_id":1.0,"name":"kim","comment":[{"data":"first comment","time":"Wed Jul 11 2018 17:43:27 GMT+0900 (KST)"}]}
+{"_id":2.0,"name":"lee","comment":[{"data":"first comment","time":"Wed Jul 11 2018 17:43:41 GMT+0900 (KST)"}]}
+{"_id":3.0,"name":"jang","comment":[{"data":"first comment","time":"Wed Jul 11 2018 17:43:52 GMT+0900 (KST)"}]}
+{"_id":4.0,"name":"park","comment":[{"data":"first comment","time":"Wed Jul 11 2018 17:44:04 GMT+0900 (KST)"}]}
+{"_id":5.0,"name":"lim","comment":[{"data":"first comment","time":"Wed Jul 11 2018 17:44:57 GMT+0900 (KST)"},{"data":"second comment","time":"Wed Jul 11 2018 17:44:57 GMT+0900 (KST)"}]}
+
+Group
+{"_id":1.0,"role":"maker","nickname":"one","profile":" "}
+{"_id":2.0,"role":"manager","nickname":"two","profile":" "}
+{"_id":3.0,"role":"participant","doc":[{"nickname":"three","profile":" "},{"nickname":"four","profile":" "},{"nickname":"five","profile":" "}]}
