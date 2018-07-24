@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hello, World!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/jupyter.css">
+
+</head>
+
+<body>
+<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+<!-- Add your site or application content here -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <span class="navbar-brand mb-0 h1">Home Page</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Training
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/study1">study1</a>
+                    <a class="dropdown-item" href="/study2">study2</a>
+                    <a class="dropdown-item" href="/0703">study3</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[7]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install pymongo
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>Collecting pymongo
+  Downloading https://files.pythonhosted.org/packages/22/69/6f8358c6bbca32f1c94167ccab217bc6a70d17bdb10d4a71f4de96431e6e/pymongo-3.7.1-cp36-cp36m-macosx_10_6_intel.whl (341kB)
+    100% |████████████████████████████████| 348kB 4.2MB/s ta 0:00:01
+<span class="ansi-red-fg">distributed 1.21.8 requires msgpack, which is not installed.</span>
+<span class="ansi-red-fg">tensorflow 1.8.0 has requirement numpy&gt;=1.13.3, but you&#39;ll have numpy 1.13.0 which is incompatible.</span>
+Installing collected packages: pymongo
+Successfully installed pymongo-3.7.1
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[8]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span
+                                class="nn">pymongo</span> <span class="k">import</span> <span
+                                class="n">MongoClient</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[10]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span> <span
+                                class="o">=</span> <span class="n">MongoClient</span><span class="p">()</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[11]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span> <span
+                                class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span
+                                class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span
+                                class="mi">27017</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[12]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[12]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>MongoClient(host=[&#39;localhost:27017&#39;], document_class=dict, tz_aware=False, connect=True)</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[13]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span
+                                class="n">client</span><span class="o">.</span><span class="n">test_database</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[14]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[14]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>Database(MongoClient(host=[&#39;localhost:27017&#39;], document_class=dict, tz_aware=False, connect=True), &#39;test_database&#39;)</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[15]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span
+                                class="n">client</span><span class="p">[</span><span
+                                class="s1">&#39;sns&#39;</span><span class="p">]</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[16]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[16]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>Database(MongoClient(host=[&#39;localhost:27017&#39;], document_class=dict, tz_aware=False, connect=True), &#39;sns&#39;)</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[19]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">collection</span> <span
+                                class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s1">&#39;sns&#39;</span><span
+                                class="p">]</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[20]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">collection</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[20]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>Collection(Database(MongoClient(host=[&#39;localhost:27017&#39;], document_class=dict, tz_aware=False, connect=True), &#39;sns&#39;), &#39;sns&#39;)</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[22]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span><span
+                                class="o">.</span><span class="n">host</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[22]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>Database(MongoClient(host=[&#39;localhost:27017&#39;], document_class=dict, tz_aware=False, connect=True), &#39;host&#39;)</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[23]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span><span
+                                class="o">.</span><span class="n">server_info</span><span class="p">()</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[23]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+<pre>{&#39;version&#39;: &#39;4.0.0&#39;,
+ &#39;gitVersion&#39;: &#39;3b07af3d4f471ae89e8186d33bbb1d5259597d51&#39;,
+ &#39;modules&#39;: [],
+ &#39;allocator&#39;: &#39;system&#39;,
+ &#39;javascriptEngine&#39;: &#39;mozjs&#39;,
+ &#39;sysInfo&#39;: &#39;deprecated&#39;,
+ &#39;versionArray&#39;: [4, 0, 0, 0],
+ &#39;openssl&#39;: {&#39;running&#39;: &#39;Apple Secure Transport&#39;},
+ &#39;buildEnvironment&#39;: {&#39;distmod&#39;: &#39;&#39;,
+  &#39;distarch&#39;: &#39;x86_64&#39;,
+  &#39;cc&#39;: &#39;gcc: Apple LLVM version 8.1.0 (clang-802.0.42)&#39;,
+  &#39;ccflags&#39;: &#39;-mmacosx-version-min=10.10 -fno-omit-frame-pointer -fno-strict-aliasing -ggdb -pthread -Wall -Wsign-compare -Wno-unknown-pragmas -Winvalid-pch -Werror -O2 -Wno-unused-local-typedefs -Wno-unused-function -Wno-unused-private-field -Wno-deprecated-declarations -Wno-tautological-constant-out-of-range-compare -Wno-unused-const-variable -Wno-missing-braces -Wno-inconsistent-missing-override -Wno-potentially-evaluated-expression -Wno-exceptions -fstack-protector-strong -fno-builtin-memcmp&#39;,
+  &#39;cxx&#39;: &#39;g++: Apple LLVM version 8.1.0 (clang-802.0.42)&#39;,
+  &#39;cxxflags&#39;: &#39;-Woverloaded-virtual -Werror=unused-result -Wpessimizing-move -Wredundant-move -Wno-undefined-var-template -stdlib=libc++ -std=c++14&#39;,
+  &#39;linkflags&#39;: &#39;-mmacosx-version-min=10.10 -Wl,-bind_at_load -Wl,-fatal_warnings -fstack-protector-strong -stdlib=libc++&#39;,
+  &#39;target_arch&#39;: &#39;x86_64&#39;,
+  &#39;target_os&#39;: &#39;macOS&#39;},
+ &#39;bits&#39;: 64,
+ &#39;debug&#39;: False,
+ &#39;maxBsonObjectSize&#39;: 16777216,
+ &#39;storageEngines&#39;: [&#39;devnull&#39;, &#39;ephemeralForTest&#39;, &#39;mmapv1&#39;, &#39;wiredTiger&#39;],
+ &#39;ok&#39;: 1.0}</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[24]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span><span
+                                class="o">.</span><span class="n">list_database_names</span><span class="p">()</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[24]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>[&#39;admin&#39;, &#39;config&#39;, &#39;local&#39;, &#39;sns&#39;]</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[30]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_db</span> <span
+                                class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_databases</span><span
+                                class="p">()</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[27]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_db</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[27]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>&lt;pymongo.command_cursor.CommandCursor at 0x1035aa5c0&gt;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[28]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span
+                                class="p">(</span><span class="n">list_db</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[28]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+<pre>[{&#39;name&#39;: &#39;admin&#39;, &#39;sizeOnDisk&#39;: 176128.0, &#39;empty&#39;: False},
+ {&#39;name&#39;: &#39;config&#39;, &#39;sizeOnDisk&#39;: 12288.0, &#39;empty&#39;: False},
+ {&#39;name&#39;: &#39;local&#39;, &#39;sizeOnDisk&#39;: 32768.0, &#39;empty&#39;: False},
+ {&#39;name&#39;: &#39;sns&#39;, &#39;sizeOnDisk&#39;: 86016.0, &#39;empty&#39;: False}]</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[29]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span
+                                class="p">(</span><span class="n">list_db</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[29]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>[]</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[32]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span
+                                class="n">i</span> <span class="ow">in</span> <span class="n">list_db</span><span
+                                class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span
+                                    class="n">i</span><span class="p">))</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;name&#39;: &#39;config&#39;, &#39;sizeOnDisk&#39;: 12288.0, &#39;empty&#39;: False}
+&lt;class &#39;dict&#39;&gt;
+{&#39;name&#39;: &#39;local&#39;, &#39;sizeOnDisk&#39;: 32768.0, &#39;empty&#39;: False}
+&lt;class &#39;dict&#39;&gt;
+{&#39;name&#39;: &#39;sns&#39;, &#39;sizeOnDisk&#39;: 86016.0, &#39;empty&#39;: False}
+&lt;class &#39;dict&#39;&gt;
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[39]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span> <span
+                                class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_database</span><span
+                                class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[40]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">item</span> <span
+                                class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">item</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[42]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">item</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[42]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>Collection(Database(MongoClient(host=[&#39;localhost:27017&#39;], document_class=dict, tz_aware=False, connect=True), &#39;test&#39;), &#39;item&#39;)</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[43]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">newitem</span> <span
+                                class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span
+                                class="p">:</span> <span class="s1">&#39;item1&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="mi">10000</span><span
+                                    class="p">,</span>
+          <span class="s1">&#39;ratio&#39;</span><span class="p">:</span> <span class="mf">4.5</span><span
+                                    class="p">}</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[44]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">item</span><span
+                                class="o">.</span><span class="n">insert_one</span><span class="p">(</span><span
+                                class="n">newitem</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[44]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>&lt;pymongo.results.InsertOneResult at 0x10348ae88&gt;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[53]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span
+                                class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">find</span><span
+                                class="p">({})</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[50]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[50]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>&lt;pymongo.cursor.Cursor at 0x1038a40b8&gt;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[48]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span
+                                class="n">i</span> <span class="ow">in</span> <span class="n">result</span><span
+                                class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;_id&#39;: ObjectId(&#39;5b4eaa241ce039526236b30d&#39;), &#39;name&#39;: &#39;item1&#39;, &#39;price&#39;: 10000, &#39;ratio&#39;: 4.5}
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[49]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span
+                                class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[49]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>[]</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <h3 id="monogdb&#50640;&#49436;&#45716;-&#51221;&#49688;&#45716;-&#49892;&#51228;&#47196;&#45716;--double&#47196;-&#51200;&#51109;&#51060;-&#46108;&#45796;.">
+                        monogdb&#50640;&#49436;&#45716; &#51221;&#49688;&#45716; &#49892;&#51228;&#47196;&#45716; double&#47196;
+                        &#51200;&#51109;&#51060; &#46108;&#45796;.<a class="anchor-link"
+                                                                     href="#monogdb&#50640;&#49436;&#45716;-&#51221;&#49688;&#45716;-&#49892;&#51228;&#47196;&#45716;--double&#47196;-&#51200;&#51109;&#51060;-&#46108;&#45796;.">&#182;</a>
+                    </h3>
+                    <h3 id="pymongo&#50640;&#49436;&#45716;-&#54028;&#51060;&#50028;&#51032;-&#47928;&#48277;&#51012;-&#46384;&#46972;&#44032;&#49436;-int32&#47196;-&#51200;&#51109;&#51060;-&#46108;&#45796;.">
+                        pymongo&#50640;&#49436;&#45716; &#54028;&#51060;&#50028;&#51032; &#47928;&#48277;&#51012;
+                        &#46384;&#46972;&#44032;&#49436; int32&#47196; &#51200;&#51109;&#51060; &#46108;&#45796;.<a
+                            class="anchor-link"
+                            href="#pymongo&#50640;&#49436;&#45716;-&#54028;&#51060;&#50028;&#51032;-&#47928;&#48277;&#51012;-&#46384;&#46972;&#44032;&#49436;-int32&#47196;-&#51200;&#51109;&#51060;-&#46108;&#45796;.">&#182;</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[54]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span
+                                class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">result</span><span
+                                class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[55]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span
+                                class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[55]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>list</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[56]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span><span
+                                class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[56]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+<pre>{&#39;_id&#39;: ObjectId(&#39;5b4eaa241ce039526236b30d&#39;),
+ &#39;name&#39;: &#39;item1&#39;,
+ &#39;price&#39;: 10000,
+ &#39;ratio&#39;: 4.5}</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[57]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span
+                                class="p">(</span><span class="n">i</span><span class="p">[</span><span
+                                class="mi">0</span><span class="p">][</span><span class="s1">&#39;price&#39;</span><span
+                                class="p">])</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[57]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>int</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[59]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">newitem2</span> <span
+                                class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span
+                                class="p">:</span> <span class="s1">&#39;item2&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="nb">float</span><span
+                                    class="p">(</span><span class="mi">10000</span><span class="p">),</span>
+          <span class="s1">&#39;ratio&#39;</span><span class="p">:</span> <span class="mf">4.5</span><span
+                                    class="p">}</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <ul>
+                        <li>float 명시하였기 때문에 double로 저장된다. 그래서 mixed의 자료형으로 저장된다.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[60]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">item</span><span
+                                class="o">.</span><span class="n">insert_one</span><span class="p">(</span><span
+                                class="n">newitem2</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[60]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>&lt;pymongo.results.InsertOneResult at 0x103893c88&gt;</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[61]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span
+                                class="o">=</span> <span class="p">{</span><span
+                                class="s2">&quot;serviceKey&quot;</span><span class="p">:</span><span class="s2">&quot;0xfE7KsqCRvly8WqAN7j%2BP3UOwr1c2n%2BO4R3yKGwmOHzgCJ7LccKci0zdNmZbQUQbt3edT3CKrl4%2BG83Xhx25A%3D%3D&quot;</span><span
+                                class="p">,</span>
+          <span class="s2">&quot;numOfRows&quot;</span><span class="p">:</span><span class="mi">10</span><span
+                                    class="p">,</span>
+          <span class="s2">&quot;pageNo&quot;</span><span class="p">:</span><span class="mi">1</span><span
+                                    class="p">,</span>
+          <span class="s2">&quot;sidoName&quot;</span><span class="p">:</span><span class="kc">None</span><span
+                                    class="p">,</span>
+          <span class="s2">&quot;searchCondition&quot;</span><span class="p">:</span><span
+                                    class="s2">&quot;DAILY&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ver&quot;</span><span class="p">:</span><span class="mf">1.3</span><span
+                                    class="p">,</span>
+          <span class="s2">&quot;_returnType&quot;</span><span class="p">:</span><span
+                                    class="s2">&quot;json&quot;</span><span class="p">}</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[62]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span><span
+                                class="p">[</span><span class="s2">&quot;sidoName&quot;</span><span
+                                class="p">]</span> <span class="o">=</span> <span class="s2">&quot;서울&quot;</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[63]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span
+                                class="o">=</span> <span class="s2">&quot;http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnMesureSidoLIst&quot;</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[67]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span
+                                class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">urllib</span> <span class="k">import</span> <span class="n">parse</span>
+<span class="n">params</span><span class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span
+                                    class="p">]</span> <span class="o">=</span> <span class="n">urllib</span><span
+                                    class="o">.</span><span class="n">parse</span><span class="o">.</span><span
+                                    class="n">unquote</span><span class="p">(</span><span class="n">params</span><span
+                                    class="p">[</span><span class="s2">&quot;serviceKey&quot;</span><span
+                                    class="p">])</span>
+<span class="n">paramURL</span> <span class="o">=</span> <span class="n">parse</span><span class="o">.</span><span
+                                    class="n">urlencode</span><span class="p">(</span><span class="n">params</span><span
+                                    class="p">)</span> <span class="c1">#알아서 url 생성</span>
+<span class="n">paramBytes</span> <span class="o">=</span> <span class="n">paramURL</span><span class="o">.</span><span
+                                    class="n">encode</span><span class="p">(</span><span
+                                    class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span
+                                    class="n">request</span><span class="o">.</span><span class="n">Request</span><span
+                                    class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">data</span><span
+                                    class="o">=</span><span class="n">paramBytes</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span
+                                    class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span
+                                    class="p">(</span><span class="n">req</span><span class="p">)</span> <span
+                                    class="c1">#response</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span
+                                    class="n">read</span><span class="p">()</span>
+<span class="n">resultStr</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span
+                                    class="n">decode</span><span class="p">(</span><span
+                                    class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">resultObj</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span
+                                    class="n">loads</span><span class="p">(</span><span class="n">resultStr</span><span
+                                    class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[69]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span
+                                class="p">(</span><span class="n">resultObj</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[69]:</div>
+
+
+                        <div class="output_text output_subarea output_execute_result">
+                            <pre>dict</pre>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[82]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span> <span
+                                class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span
+                                class="s1">&#39;localhost&#39;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[83]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span><span
+                                class="o">.</span><span class="n">air</span><span class="o">.</span><span
+                                class="n">info</span><span class="o">.</span><span class="n">insert_many</span><span
+                                class="p">(</span><span class="n">resultObj</span><span class="p">[</span><span
+                                class="s1">&#39;list&#39;</span><span class="p">])</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">BulkWriteError</span>                            Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-83-63df85d699ee&gt;</span> in <span
+        class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>client<span class="ansi-blue-fg">.</span>air<span
+        class="ansi-blue-fg">.</span>info<span class="ansi-blue-fg">.</span>insert_many<span
+        class="ansi-blue-fg">(</span>resultObj<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;list&#39;</span><span
+        class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/anaconda3/lib/python3.6/site-packages/pymongo/collection.py</span> in <span
+        class="ansi-cyan-fg">insert_many</span><span class="ansi-blue-fg">(self, documents, ordered, bypass_document_validation, session)</span>
+<span class="ansi-green-intense-fg ansi-bold">    751</span>         blk <span class="ansi-blue-fg">=</span> _Bulk<span
+        class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> ordered<span class="ansi-blue-fg">,</span> bypass_document_validation<span
+        class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    752</span>         blk<span class="ansi-blue-fg">.</span>ops <span
+        class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>doc <span class="ansi-green-fg">for</span> doc <span
+        class="ansi-green-fg">in</span> gen<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span
+        class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">--&gt; 753</span><span class="ansi-red-fg">         </span>blk<span
+        class="ansi-blue-fg">.</span>execute<span class="ansi-blue-fg">(</span>write_concern<span
+        class="ansi-blue-fg">,</span> session<span class="ansi-blue-fg">=</span>session<span
+        class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    754</span>         <span class="ansi-green-fg">return</span> InsertManyResult<span
+        class="ansi-blue-fg">(</span>inserted_ids<span class="ansi-blue-fg">,</span> write_concern<span
+        class="ansi-blue-fg">.</span>acknowledged<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    755</span>
+
+<span class="ansi-green-fg">/anaconda3/lib/python3.6/site-packages/pymongo/bulk.py</span> in <span class="ansi-cyan-fg">execute</span><span
+        class="ansi-blue-fg">(self, write_concern, session)</span>
+<span class="ansi-green-intense-fg ansi-bold">    511</span>                 self<span class="ansi-blue-fg">.</span>execute_no_results<span
+        class="ansi-blue-fg">(</span>sock_info<span class="ansi-blue-fg">,</span> generator<span
+        class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    512</span>         <span class="ansi-green-fg">else</span><span
+        class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 513</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span
+        class="ansi-blue-fg">.</span>execute_command<span class="ansi-blue-fg">(</span>generator<span
+        class="ansi-blue-fg">,</span> write_concern<span class="ansi-blue-fg">,</span> session<span
+        class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    514</span>
+<span class="ansi-green-intense-fg ansi-bold">    515</span>
+
+<span class="ansi-green-fg">/anaconda3/lib/python3.6/site-packages/pymongo/bulk.py</span> in <span class="ansi-cyan-fg">execute_command</span><span
+        class="ansi-blue-fg">(self, generator, write_concern, session)</span>
+<span class="ansi-green-intense-fg ansi-bold">    339</span>
+<span class="ansi-green-intense-fg ansi-bold">    340</span>         <span
+        class="ansi-green-fg">if</span> full_result<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;writeErrors&#34;</span><span
+        class="ansi-blue-fg">]</span> <span class="ansi-green-fg">or</span> full_result<span
+        class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;writeConcernErrors&#34;</span><span
+        class="ansi-blue-fg">]</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 341</span><span class="ansi-red-fg">             </span>_raise_bulk_write_error<span
+        class="ansi-blue-fg">(</span>full_result<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    342</span>         <span class="ansi-green-fg">return</span> full_result
+<span class="ansi-green-intense-fg ansi-bold">    343</span>
+
+<span class="ansi-green-fg">/anaconda3/lib/python3.6/site-packages/pymongo/bulk.py</span> in <span class="ansi-cyan-fg">_raise_bulk_write_error</span><span
+        class="ansi-blue-fg">(full_result)</span>
+<span class="ansi-green-intense-fg ansi-bold">    138</span>         full_result[&#34;writeErrors&#34;].sort(
+<span class="ansi-green-intense-fg ansi-bold">    139</span>             key=lambda error: error[&#34;index&#34;])
+<span class="ansi-green-fg">--&gt; 140</span><span class="ansi-red-fg">     </span><span
+        class="ansi-green-fg">raise</span> BulkWriteError<span class="ansi-blue-fg">(</span>full_result<span
+        class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    141</span>
+<span class="ansi-green-intense-fg ansi-bold">    142</span>
+
+<span class="ansi-red-fg">BulkWriteError</span>: batch op errors occurred</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[78]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span
+                                class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">air</span><span
+                                class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">find</span><span
+                                class="p">({})</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[79]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span
+                                class="nn">pprint</span> <span class="k">import</span> <span class="n">pprint</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[80]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span
+                                class="n">i</span> <span class="ow">in</span> <span class="n">result</span><span
+                                class="p">:</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt"></div>
+
+
+                        <div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;_id&#39;: ObjectId(&#39;5b4eacc71ce039526236b311&#39;),
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;강남구&#39;,
+ &#39;cityNameEng&#39;: &#39;Gangnam-gu&#39;,
+ &#39;coValue&#39;: &#39;0.4&#39;,
+ &#39;dataGubun&#39;: &#39;&#39;,
+ &#39;dataTime&#39;: &#39;2018-07-18 11:00&#39;,
+ &#39;districtCode&#39;: &#39;02&#39;,
+ &#39;districtNumSeq&#39;: &#39;001&#39;,
+ &#39;itemCode&#39;: &#39;&#39;,
+ &#39;khaiValue&#39;: &#39;&#39;,
+ &#39;no2Value&#39;: &#39;0.034&#39;,
+ &#39;numOfRows&#39;: &#39;10&#39;,
+ &#39;o3Value&#39;: &#39;0.012&#39;,
+ &#39;pageNo&#39;: &#39;1&#39;,
+ &#39;pm10Value&#39;: &#39;31&#39;,
+ &#39;pm25Value&#39;: &#39;24&#39;,
+ &#39;resultCode&#39;: &#39;&#39;,
+ &#39;resultMsg&#39;: &#39;&#39;,
+ &#39;searchCondition&#39;: &#39;&#39;,
+ &#39;serviceKey&#39;: &#39;&#39;,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;so2Value&#39;: &#39;0.007&#39;,
+ &#39;totalCount&#39;: &#39;&#39;}
+{&#39;_id&#39;: ObjectId(&#39;5b4eacc71ce039526236b312&#39;),
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;강동구&#39;,
+ &#39;cityNameEng&#39;: &#39;Gangdong-gu&#39;,
+ &#39;coValue&#39;: &#39;0.4&#39;,
+ &#39;dataGubun&#39;: &#39;&#39;,
+ &#39;dataTime&#39;: &#39;2018-07-18 11:00&#39;,
+ &#39;districtCode&#39;: &#39;02&#39;,
+ &#39;districtNumSeq&#39;: &#39;002&#39;,
+ &#39;itemCode&#39;: &#39;&#39;,
+ &#39;khaiValue&#39;: &#39;&#39;,
+ &#39;no2Value&#39;: &#39;0.022&#39;,
+ &#39;numOfRows&#39;: &#39;10&#39;,
+ &#39;o3Value&#39;: &#39;0.014&#39;,
+ &#39;pageNo&#39;: &#39;1&#39;,
+ &#39;pm10Value&#39;: &#39;35&#39;,
+ &#39;pm25Value&#39;: &#39;24&#39;,
+ &#39;resultCode&#39;: &#39;&#39;,
+ &#39;resultMsg&#39;: &#39;&#39;,
+ &#39;searchCondition&#39;: &#39;&#39;,
+ &#39;serviceKey&#39;: &#39;&#39;,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;so2Value&#39;: &#39;0.004&#39;,
+ &#39;totalCount&#39;: &#39;&#39;}
+{&#39;_id&#39;: ObjectId(&#39;5b4eacc71ce039526236b313&#39;),
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;강북구&#39;,
+ &#39;cityNameEng&#39;: &#39;Gangbuk-gu&#39;,
+ &#39;coValue&#39;: &#39;0.3&#39;,
+ &#39;dataGubun&#39;: &#39;&#39;,
+ &#39;dataTime&#39;: &#39;2018-07-18 11:00&#39;,
+ &#39;districtCode&#39;: &#39;02&#39;,
+ &#39;districtNumSeq&#39;: &#39;003&#39;,
+ &#39;itemCode&#39;: &#39;&#39;,
+ &#39;khaiValue&#39;: &#39;&#39;,
+ &#39;no2Value&#39;: &#39;0.022&#39;,
+ &#39;numOfRows&#39;: &#39;10&#39;,
+ &#39;o3Value&#39;: &#39;0.025&#39;,
+ &#39;pageNo&#39;: &#39;1&#39;,
+ &#39;pm10Value&#39;: &#39;39&#39;,
+ &#39;pm25Value&#39;: &#39;26&#39;,
+ &#39;resultCode&#39;: &#39;&#39;,
+ &#39;resultMsg&#39;: &#39;&#39;,
+ &#39;searchCondition&#39;: &#39;&#39;,
+ &#39;serviceKey&#39;: &#39;&#39;,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;so2Value&#39;: &#39;0.004&#39;,
+ &#39;totalCount&#39;: &#39;&#39;}
+{&#39;_id&#39;: ObjectId(&#39;5b4eacc71ce039526236b314&#39;),
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;강서구&#39;,
+ &#39;cityNameEng&#39;: &#39;Gangseo-gu&#39;,
+ &#39;coValue&#39;: &#39;0.3&#39;,
+ &#39;dataGubun&#39;: &#39;&#39;,
+ &#39;dataTime&#39;: &#39;2018-07-18 11:00&#39;,
+ &#39;districtCode&#39;: &#39;02&#39;,
+ &#39;districtNumSeq&#39;: &#39;004&#39;,
+ &#39;itemCode&#39;: &#39;&#39;,
+ &#39;khaiValue&#39;: &#39;&#39;,
+ &#39;no2Value&#39;: &#39;0.025&#39;,
+ &#39;numOfRows&#39;: &#39;10&#39;,
+ &#39;o3Value&#39;: &#39;0.022&#39;,
+ &#39;pageNo&#39;: &#39;1&#39;,
+ &#39;pm10Value&#39;: &#39;30&#39;,
+ &#39;pm25Value&#39;: &#39;26&#39;,
+ &#39;resultCode&#39;: &#39;&#39;,
+ &#39;resultMsg&#39;: &#39;&#39;,
+ &#39;searchCondition&#39;: &#39;&#39;,
+ &#39;serviceKey&#39;: &#39;&#39;,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;so2Value&#39;: &#39;0.005&#39;,
+ &#39;totalCount&#39;: &#39;&#39;}
+{&#39;_id&#39;: ObjectId(&#39;5b4eacc71ce039526236b315&#39;),
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;관악구&#39;,
+ &#39;cityNameEng&#39;: &#39;Gwanak-gu&#39;,
+ &#39;coValue&#39;: &#39;0.3&#39;,
+ &#39;dataGubun&#39;: &#39;&#39;,
+ &#39;dataTime&#39;: &#39;2018-07-18 11:00&#39;,
+ &#39;districtCode&#39;: &#39;02&#39;,
+ &#39;districtNumSeq&#39;: &#39;005&#39;,
+ &#39;itemCode&#39;: &#39;&#39;,
+ &#39;khaiValue&#39;: &#39;&#39;,
+ &#39;no2Value&#39;: &#39;0.024&#39;,
+ &#39;numOfRows&#39;: &#39;10&#39;,
+ &#39;o3Value&#39;: &#39;0.026&#39;,
+ &#39;pageNo&#39;: &#39;1&#39;,
+ &#39;pm10Value&#39;: &#39;38&#39;,
+ &#39;pm25Value&#39;: &#39;22&#39;,
+ &#39;resultCode&#39;: &#39;&#39;,
+ &#39;resultMsg&#39;: &#39;&#39;,
+ &#39;searchCondition&#39;: &#39;&#39;,
+ &#39;serviceKey&#39;: &#39;&#39;,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;so2Value&#39;: &#39;0.004&#39;,
+ &#39;totalCount&#39;: &#39;&#39;}
+{&#39;_id&#39;: ObjectId(&#39;5b4eacc71ce039526236b316&#39;),
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;광진구&#39;,
+ &#39;cityNameEng&#39;: &#39;Gwangjin-gu&#39;,
+ &#39;coValue&#39;: &#39;0.7&#39;,
+ &#39;dataGubun&#39;: &#39;&#39;,
+ &#39;dataTime&#39;: &#39;2018-07-18 11:00&#39;,
+ &#39;districtCode&#39;: &#39;02&#39;,
+ &#39;districtNumSeq&#39;: &#39;006&#39;,
+ &#39;itemCode&#39;: &#39;&#39;,
+ &#39;khaiValue&#39;: &#39;&#39;,
+ &#39;no2Value&#39;: &#39;0.023&#39;,
+ &#39;numOfRows&#39;: &#39;10&#39;,
+ &#39;o3Value&#39;: &#39;0.013&#39;,
+ &#39;pageNo&#39;: &#39;1&#39;,
+ &#39;pm10Value&#39;: &#39;33&#39;,
+ &#39;pm25Value&#39;: &#39;24&#39;,
+ &#39;resultCode&#39;: &#39;&#39;,
+ &#39;resultMsg&#39;: &#39;&#39;,
+ &#39;searchCondition&#39;: &#39;&#39;,
+ &#39;serviceKey&#39;: &#39;&#39;,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;so2Value&#39;: &#39;0.008&#39;,
+ &#39;totalCount&#39;: &#39;&#39;}
+{&#39;_id&#39;: ObjectId(&#39;5b4eacc71ce039526236b317&#39;),
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;구로구&#39;,
+ &#39;cityNameEng&#39;: &#39;Guro-gu&#39;,
+ &#39;coValue&#39;: &#39;0.2&#39;,
+ &#39;dataGubun&#39;: &#39;&#39;,
+ &#39;dataTime&#39;: &#39;2018-07-18 11:00&#39;,
+ &#39;districtCode&#39;: &#39;02&#39;,
+ &#39;districtNumSeq&#39;: &#39;007&#39;,
+ &#39;itemCode&#39;: &#39;&#39;,
+ &#39;khaiValue&#39;: &#39;&#39;,
+ &#39;no2Value&#39;: &#39;0.014&#39;,
+ &#39;numOfRows&#39;: &#39;10&#39;,
+ &#39;o3Value&#39;: &#39;0.025&#39;,
+ &#39;pageNo&#39;: &#39;1&#39;,
+ &#39;pm10Value&#39;: &#39;30&#39;,
+ &#39;pm25Value&#39;: &#39;24&#39;,
+ &#39;resultCode&#39;: &#39;&#39;,
+ &#39;resultMsg&#39;: &#39;&#39;,
+ &#39;searchCondition&#39;: &#39;&#39;,
+ &#39;serviceKey&#39;: &#39;&#39;,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;so2Value&#39;: &#39;0.003&#39;,
+ &#39;totalCount&#39;: &#39;&#39;}
+{&#39;_id&#39;: ObjectId(&#39;5b4eacc71ce039526236b318&#39;),
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;금천구&#39;,
+ &#39;cityNameEng&#39;: &#39;Geumcheon-gu&#39;,
+ &#39;coValue&#39;: &#39;0.3&#39;,
+ &#39;dataGubun&#39;: &#39;&#39;,
+ &#39;dataTime&#39;: &#39;2018-07-18 11:00&#39;,
+ &#39;districtCode&#39;: &#39;02&#39;,
+ &#39;districtNumSeq&#39;: &#39;008&#39;,
+ &#39;itemCode&#39;: &#39;&#39;,
+ &#39;khaiValue&#39;: &#39;&#39;,
+ &#39;no2Value&#39;: &#39;0.020&#39;,
+ &#39;numOfRows&#39;: &#39;10&#39;,
+ &#39;o3Value&#39;: &#39;0.022&#39;,
+ &#39;pageNo&#39;: &#39;1&#39;,
+ &#39;pm10Value&#39;: &#39;28&#39;,
+ &#39;pm25Value&#39;: &#39;22&#39;,
+ &#39;resultCode&#39;: &#39;&#39;,
+ &#39;resultMsg&#39;: &#39;&#39;,
+ &#39;searchCondition&#39;: &#39;&#39;,
+ &#39;serviceKey&#39;: &#39;&#39;,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;so2Value&#39;: &#39;0.005&#39;,
+ &#39;totalCount&#39;: &#39;&#39;}
+{&#39;_id&#39;: ObjectId(&#39;5b4eacc71ce039526236b319&#39;),
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;노원구&#39;,
+ &#39;cityNameEng&#39;: &#39;Nowon-gu&#39;,
+ &#39;coValue&#39;: &#39;0.4&#39;,
+ &#39;dataGubun&#39;: &#39;&#39;,
+ &#39;dataTime&#39;: &#39;2018-07-18 11:00&#39;,
+ &#39;districtCode&#39;: &#39;02&#39;,
+ &#39;districtNumSeq&#39;: &#39;009&#39;,
+ &#39;itemCode&#39;: &#39;&#39;,
+ &#39;khaiValue&#39;: &#39;&#39;,
+ &#39;no2Value&#39;: &#39;0.024&#39;,
+ &#39;numOfRows&#39;: &#39;10&#39;,
+ &#39;o3Value&#39;: &#39;0.020&#39;,
+ &#39;pageNo&#39;: &#39;1&#39;,
+ &#39;pm10Value&#39;: &#39;32&#39;,
+ &#39;pm25Value&#39;: &#39;28&#39;,
+ &#39;resultCode&#39;: &#39;&#39;,
+ &#39;resultMsg&#39;: &#39;&#39;,
+ &#39;searchCondition&#39;: &#39;&#39;,
+ &#39;serviceKey&#39;: &#39;&#39;,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;so2Value&#39;: &#39;0.006&#39;,
+ &#39;totalCount&#39;: &#39;&#39;}
+{&#39;_id&#39;: ObjectId(&#39;5b4eacc71ce039526236b31a&#39;),
+ &#39;_returnType&#39;: &#39;json&#39;,
+ &#39;cityName&#39;: &#39;도봉구&#39;,
+ &#39;cityNameEng&#39;: &#39;Dobong-gu&#39;,
+ &#39;coValue&#39;: &#39;0.7&#39;,
+ &#39;dataGubun&#39;: &#39;&#39;,
+ &#39;dataTime&#39;: &#39;2018-07-18 11:00&#39;,
+ &#39;districtCode&#39;: &#39;02&#39;,
+ &#39;districtNumSeq&#39;: &#39;010&#39;,
+ &#39;itemCode&#39;: &#39;&#39;,
+ &#39;khaiValue&#39;: &#39;&#39;,
+ &#39;no2Value&#39;: &#39;0.021&#39;,
+ &#39;numOfRows&#39;: &#39;10&#39;,
+ &#39;o3Value&#39;: &#39;0.022&#39;,
+ &#39;pageNo&#39;: &#39;1&#39;,
+ &#39;pm10Value&#39;: &#39;40&#39;,
+ &#39;pm25Value&#39;: &#39;24&#39;,
+ &#39;resultCode&#39;: &#39;&#39;,
+ &#39;resultMsg&#39;: &#39;&#39;,
+ &#39;searchCondition&#39;: &#39;&#39;,
+ &#39;serviceKey&#39;: &#39;&#39;,
+ &#39;sidoName&#39;: &#39;서울&#39;,
+ &#39;so2Value&#39;: &#39;0.004&#39;,
+ &#39;totalCount&#39;: &#39;&#39;}
+</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="static/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="static/js/plugins.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="static/js/bootstrap.js"></script>
+<script src="static/js/main.js"></script>
+
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga = function () {
+        ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
