@@ -60,7 +60,7 @@
    
    <tr>
    <td>3주차</td>
-   <td>파이썬</td>
+   <td>Data</td>
    <td>
    <ul>
    <li>
@@ -79,7 +79,7 @@
    
    <tr>
    <td>4주차</td>
-   <td>Data</td>
+   <td>시스템 개발</td>
    <td>
    <ul>
    <li>
