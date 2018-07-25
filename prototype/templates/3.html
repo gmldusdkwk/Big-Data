@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <table class="table-striped">
+    <thead>
+    <tr>
+        <th scope="col">순위</th>
+        <th scope="col">처리 기관</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in range(20) %}
+        <tr>
+        <td scope="row">i</td>
+        <td>abcdef</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+{% endblock %}

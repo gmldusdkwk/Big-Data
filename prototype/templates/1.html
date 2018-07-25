@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br><br>
+    <form method="post" action="/1">
+    {{ form.csrf_token }}
+    {{ form.text.label }}{{ form.text(size=20) }}
+    <input type="submit" value="검색">
+    </form>
+    <img src="/static/img/korea.jpg">
+{% endblock %}
