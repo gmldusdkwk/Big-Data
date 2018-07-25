@@ -15,19 +15,19 @@
    <td>파이썬</td>
    <td>
    <ul>
-   <li>
+   <li>[x]
      <a href="https://github.com/gmldusdkwk/Big-Data/tree/master/Python_Tutorial">python tutorial</a>
    </li>
-   <li>
+   <li>[x]
      <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0703.ipynb">0703.ipynb</a>
    </li>
-   <li>
+   <li>[x]
      <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0704.ipynb">0704.ipynb</a>
    </li>
-   <li>
+   <li>[x]
      <a href = "https://github.com/gmldusdkwk/Big-Data/blob/master/0705.ipynb">0705.ipynb</a>
    </li>
-   <li>
+   <li>[x]
      <a href = "https://github.com/gmldusdkwk/Big-Data/blob/master/0709.ipynb">0709.ipynb</a>
    </li>
    </ul>
@@ -39,19 +39,19 @@
    <td>Data</td>
    <td>
    <ul>
-   <li>
+   <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0710_sqlite3.ipynb'>sqlite3. 0710.ipynb</a>
    </li>
-   <li>
+   <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0711.json'>sqlite3. 0711.json</a>
    </li>
-   <li>
+   <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/tree/master/ORM-sqlalchemy'>orm - sqlalchemy</a>
    </li>
-   <li>
+   <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0713_JSON.ipynb'>json</a>
    </li>
-   <li>
+   <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0713_XML.ipynb'>xml</a>
    </li>
    </ul>
@@ -63,14 +63,14 @@
    <td>Data</td>
    <td>
    <ul>
-   <li>
+   <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0717.ipynb'>0717 crawling</a>
    </li>
-   <li>
+   <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0718.ipynb'>0718 mongodb, </a>
    <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0718_mongodb.png'>0718 mongodb.png</a>
    </li>
-   <li>
+   <li>[x]
      <a href=''>자연어 처리</a>
    </li>
    </ul>
@@ -82,7 +82,7 @@
    <td>시스템 개발</td>
    <td>
    <ul>
-   <li>
+   <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/tree/master/0723'>Flask </a>
    </li>
    </ul>
