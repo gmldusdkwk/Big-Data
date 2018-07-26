@@ -39,18 +39,18 @@
    <td>Data</td>
    <td>
    <ul>
-   <li>[x]
+        <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0710_sqlite3.ipynb'>sqlite3. 0710.ipynb</a>
-   </li>
+   </li>
    <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0711.json'>sqlite3. 0711.json</a>
    </li>
-   <li>[x]
+        <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/tree/master/ORM-sqlalchemy'>orm - sqlalchemy</a>
-   </li>
+        </li>
    <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0713_JSON.ipynb'>json</a>
-   </li>
+        </li>
    <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0713_XML.ipynb'>xml</a>
    </li>
@@ -61,16 +61,16 @@
    <tr>
    <td>3주차</td>
    <td>Data</td>
-   <td>
-   <ul>
-   <li>[x]
+     <td>
+          <ul>
+               <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0717.ipynb'>0717 crawling</a>
-   </li>
-   <li>[x]
+               </li>
+               <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0718.ipynb'>0718 mongodb, </a>
    <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0718_mongodb.png'>0718 mongodb.png</a>
    </li>
-   <li>[x]
+               <li>[x]
      <a href=''>자연어 처리</a>
    </li>
    </ul>
