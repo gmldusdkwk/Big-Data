@@ -18,16 +18,16 @@
    <li>[x]
      <a href="https://github.com/gmldusdkwk/Big-Data/tree/master/Python_Tutorial">python tutorial</a>
    </li>
-   <li>[x]
+   <li>[x]
      <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0703.ipynb">0703.ipynb</a>
    </li>
-   <li>[x]
+   <li>[x]
      <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0704.ipynb">0704.ipynb</a>
    </li>
-   <li>[x]
+   <li>[x]
      <a href = "https://github.com/gmldusdkwk/Big-Data/blob/master/0705.ipynb">0705.ipynb</a>
    </li>
-   <li>[x]
+   <li>[x]
      <a href = "https://github.com/gmldusdkwk/Big-Data/blob/master/0709.ipynb">0709.ipynb</a>
    </li>
    </ul>
