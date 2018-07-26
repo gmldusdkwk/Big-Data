@@ -85,6 +85,9 @@
    <li>[x]
      <a href='https://github.com/gmldusdkwk/Big-Data/tree/master/0723'>Flask </a>
    </li>
+   <li>[x]
+     <a href='https://github.com/gmldusdkwk/Big-Data/tree/master/prototype'>project prototype </a>
+   </li>
    </ul>
    </td>
    </tr>
