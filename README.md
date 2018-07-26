@@ -69,7 +69,7 @@
                          <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0718_mongodb.png'>0718 mongodb.png</a>
                     </li>
                     <li>[x]
-                         <a href=''>자연어 처리</a>
+                         <a href='https://github.com/gmldusdkwk/Big-Data/tree/master/NLP'>자연어 처리</a>
                     </li>
                </ul>
           </td>
