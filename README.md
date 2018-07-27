@@ -88,6 +88,9 @@
                     <li>[x]
                     <a href='https://github.com/gmldusdkwk/Big-Data/tree/master/pandas'>pandas </a>
                     </li>
+                    <li>[x]
+                    <a href='https://github.com/gmldusdkwk/Big-Data/tree/master/데이터전처리'>데이터 전처리 </a>
+                    </li>
                </ul>
           </td>
      </tr>
