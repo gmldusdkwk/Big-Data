@@ -71,6 +71,9 @@
                     <li>[x]
                          <a href='https://github.com/gmldusdkwk/Big-Data/tree/master/NLP'>자연어 처리</a>
                     </li>
+                    <li>[x]
+                    <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0720.ipynb'>0720</a>
+                    </li>
                </ul>
           </td>
      </tr>
