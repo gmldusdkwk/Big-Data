@@ -97,4 +97,15 @@
                </ul>
           </td>
      </tr>
+     <tr>
+          <td>5주차</td>
+          <td>시스템 개발</td>
+          <td>
+               <ul>
+                    <li>[x]
+                         <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0730_time_series_data.ipynb'>시계열 데이터</a>
+                    </li>
+               </ul>
+          </td>
+     </tr>
 </table>
