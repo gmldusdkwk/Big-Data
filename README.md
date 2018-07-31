@@ -108,6 +108,12 @@
                     <li>[x]
                          <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0727'>Flask</a>
                     </li>
+                    <li>[x]
+                         <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0731_decorator.ipynb'>decorator</a>
+                    </li>
+                    <li>[x]
+                         <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0731_folium.ipynb'>folium</a>
+                    </li>
                </ul>
           </td>
      </tr>
