@@ -105,6 +105,9 @@
                     <li>[x]
                          <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0730_time_series_data.ipynb'>시계열 데이터</a>
                     </li>
+                    <li>[x]
+                         <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0727'>Flask</a>
+                    </li>
                </ul>
           </td>
      </tr>

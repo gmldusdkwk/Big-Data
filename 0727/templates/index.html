@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+    {{ moment.include_jquery() }}
+    {{ moment.include_moment() }}
+    {{ moment.lang('ko') }}
+{% endblock %}
+
+{% block content %}
+    <h1>Hompage</h1>
+    <p>필요성, 소개</p>
+    <br>
+    <h1>지금 현재 시각 : {{ moment().format('MMMM Do YYYY, h:mm:ss a') }}.</h1>
+    <p>{{ moment(dt).calendar() }}</p>
+{% endblock %}
