@@ -13,6 +13,7 @@ from flask_security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMix
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
+from flask_googlemaps import GoogleMaps, Map
 
 app = Flask(__name__)
 
@@ -20,14 +21,17 @@ app.config['DEBUG'] = True
 app.config['SECRET_KEY'] = '임희연'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SECURITY_PASSWORD_SALT'] = '임희연'
-
+app.config['GOOGLEMAPS_KEY'] = "AIzaSyCqXCWpsYcokf52FhcNNWfZ8Ib5ScUJv9U"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 moment = Moment(app)
-
 db = SQLAlchemy(app)
+map = GoogleMaps(app)
+
 admin = Admin(app, name='HeeYeon')
 
-roles_users = db.Table('roles_users', db.Column('user_id', db.Integer(), db.ForeignKey('user.id')), db.Column('role_id', db.Integer(), db.ForeignKey('role.id')))
+roles_users = db.Table('roles_users', db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
+                       db.Column('role_id', db.Integer(), db.ForeignKey('role.id')))
 
 
 class SearchForm(FlaskForm):
@@ -145,6 +149,63 @@ def pandas_index():
 @app.route('/booking')
 def booking():
     return render_template('booking.html')
+
+
+@app.route('/map')
+def googlemap():
+    sndmap = Map(
+        identifier="sun",
+        lat=37.5665,
+        lng=126.9780,
+        zoom=7,
+        style=(
+            "height:100%;"
+            "width:100%;"
+            "top:64;"
+            "left:0;"
+            "position:absolute;"
+            "z-index:200;"
+        ),
+        language='ko',
+        markers=[
+            {
+                'icon': 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+                'lat': 37.751855,
+                'lng': 128.876057,
+                'infobox': "<h1>강릉</h1>"
+            },
+            {
+                'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+                'lat': 35.3744136,
+                'lng': 127.13759,
+                'infobox': "<h1>순창</h1>"
+            }
+        ]
+    )
+    return render_template('map.html', sndmap=sndmap)
+
+
+@app.route('/crime')
+def crime_map():
+    from crime import pandas_index2
+    marker = pandas_index2()
+    sndmap = Map(
+        identifier="sun",
+        lat=39.72606,
+        lng=-104.949973,
+        style=(
+            "height:100%;"
+            "width:100%;"
+            "top:64;"
+            "left:0;"
+            "position:absolute;"
+            "z-index:200;"
+        ),
+        language='ko',
+        markers=marker
+    )
+    return render_template('map1.html', sndmap=sndmap)
+
 
 if __name__ == '__main__':
     app.run()

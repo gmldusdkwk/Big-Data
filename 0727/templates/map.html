@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+{#    <style>#}
+{#        #sun {#}
+{#            height: 700px; !important;#}
+{#            width: 100px;#}
+{#            top: 64px;#}
+{#            left: 0;#}
+{#            position: absolute;#}
+{#            z-index: 200;#}
+{#        }#}
+{#    </style>#}
+{% endblock %}
+{% block scripts %}
+    {{ sndmap.js }}
+{% endblock %}
+
+{% block content %}
+    {{ sndmap.html }}
+{% endblock %}
