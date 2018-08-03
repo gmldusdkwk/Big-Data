@@ -114,6 +114,15 @@
                     <li>[x]
                          <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0731_folium.ipynb'>folium</a>
                     </li>
+                    <li>[x]
+                         <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0801_information%20retrieval.ipynb'>형태소 분석</a>
+                    </li>
+                    <li>[x]
+                         <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0801_wordcloud.ipynb'>word cloud</a>
+                    </li>
+                    <li>[x]
+                         <a href='https://github.com/gmldusdkwk/Big-Data/blob/master/0802_TFIDF.ipynb'>TFIDF</a>
+                    </li>
                </ul>
           </td>
      </tr>
