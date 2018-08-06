@@ -126,4 +126,18 @@
                </ul>
           </td>
      </tr>
+     <tr>
+          <td>6주차</td>
+          <td>Machine Learning</td>
+          <td>
+            <ul>
+              <li>[x]
+                <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0806_data_streaming.ipynb">0806_data_streaming</a>
+              </li>
+              <li>[x]
+                <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0806_spark_data_frame.ipynb">0806_spark_data_frame</a>
+              </li>
+            </ul>          
+          </td>
+     </tr>
 </table>
