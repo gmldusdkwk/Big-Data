@@ -137,6 +137,9 @@
               <li>[x]
                 <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0806_spark_data_frame.ipynb">0806_spark_data_frame</a>
               </li>
+              <li>[x]
+                <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0807_recommedation.ipynb">0807_recommedation</a>
+              </li>
             </ul>          
           </td>
      </tr>
