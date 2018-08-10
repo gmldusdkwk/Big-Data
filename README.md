@@ -140,6 +140,12 @@
               <li>[x]
                 <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0807_recommedation.ipynb">0807_recommedation</a>
               </li>
+              <li>[x]
+                <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0810_Data_Visualization.ipynb">0810_Data_Visualization</a>
+              </li>
+              <li>[x]
+                <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0810_speech_recognition.ipynb">0810_speech_recognition</a>
+              </li>
             </ul>          
           </td>
      </tr>
