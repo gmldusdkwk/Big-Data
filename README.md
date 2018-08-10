@@ -141,6 +141,21 @@
                 <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0807_recommedation.ipynb">0807_recommedation</a>
               </li>
               <li>[x]
+                <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0807_recommedation.ipynb">0807_recommedation</a>
+              </li>
+              <li>[x]
+                <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0808_scikit_learn.ipynb">0808_scikit_learn</a>
+              </li>
+              <li>[x]
+                <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0808_scikit_surprise.ipynb">0808_scikit_surprise</a>
+              </li>
+              <li>[x]
+                <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0809_Data_science_%EC%9D%B4%EB%A1%A0%20%EC%88%98%EC%97%85.ipynb">0809_Data_science_이론 수업</a>
+              </li>
+              <li>[x]
+                <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0809_NLP_%EC%9D%B4%EB%A1%A0%20%EC%88%98%EC%97%85.ipynb">0809_NLP_이론수 </a>
+              </li>
+              <li>[x]
                 <a href="https://github.com/gmldusdkwk/Big-Data/blob/master/0810_Data_Visualization.ipynb">0810_Data_Visualization</a>
               </li>
               <li>[x]
